@@ -1,0 +1,242 @@
+@font-face {
+  font-family: "font";
+  src: url('/fonts/primary/Montserrat-Regular.ttf');
+}
+@font-face {
+  font-family: "header";
+  src: url('/fonts/KronaOne-Regular.ttf');
+}
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: var(--font) !important;
+}
+:root{
+  --primary: #121212;
+  --secondary: #9c27b0;
+  --tetiary: #e91e63;
+  --ui: #ccc;
+  --shd: 5px 5px 12px rgba(0,0,0,.2);
+  --header: "header";
+  --font: "font";
+  --width: 100%;
+  --font-size: 16px;
+  --text-color: #555;
+  --gradient: linear-gradient(to right, #9c27b0, #e91e63);
+}
+body{
+  background: var(--primary);
+  font-size: var(--font-size);
+  color: var(--text-color);
+}
+.brand-logo{
+  font-size: 20px !important;
+  font-family: var(--header) !important;
+}
+.add--budget{
+  padding-right: 1rem !important;
+}
+.gradient-text{
+  font-family: var(--header) !important;
+  background: var(--gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+form{
+  padding: 10px;
+  width: 95%;
+  text-align: center;
+  margin: 1rem auto;
+}
+form h3{
+  font-size: 20px;
+  font-family: var(--header) !important;
+}
+form button{
+  height: 40px !important;
+  width: 200px !important;
+}
+form .input-field input{
+  box-shadow: none !important;
+  color: #555;
+}
+.active--input{
+  border-bottom: 1.5px solid var(--secondary) !important;
+  transition: 0.4s ease-in-out;
+}
+.active--label{
+  font-size: 12px !important;
+  transform: translateY(-12px) !important;
+  transition: 0.6s ease-in-out;
+  color: #fff !important;
+}
+.container{
+  margin-top: 3rem !important;
+  padding: 10px;
+  width: 100% !important;
+  border-radius: 9px;
+}
+.container h2{
+  font-size: 24px !important;
+  text-align: center;
+}
+.card{
+  display: flex;
+  background: var(--primary) !important;
+  flex-direction: column;
+  padding: 10px;
+  width: 100% !important;
+  border-radius: 9px !important;
+}
+.card .block1 h5{
+  font-size: 20px !important;
+}
+.card .block2 button{
+  margin: 3px;
+}
+.dashboard{
+  width: 100%;
+  height: 100%;
+  background: var(--primary);
+  margin: 10px auto;
+  padding: 10px;
+  border-radius: 9px;
+  display: flex;
+  flex-direction: column;
+  visibility: hidden;
+  opacity: 0;
+  position: fixed;
+  transform: translate(-50%, -50%) ;
+  left: 50%;
+  top: 0;
+  transition: 0.4s ease-in-out;
+  z-index: 1000;
+}
+.dashboard h3{
+  font-size: 24px !important;
+}
+.dashboard div{
+  background: var(--primary);
+  border-radius: 9px;
+  margin: 10px;
+  padding: 10px;
+}
+.dashboard .card h3{
+  margin-top: -.1rem;
+}
+.dashboard .card p{
+  padding-bottom: .5rem;
+}
+ .dashboard h2{
+   font-size: 24px !important;
+   font-family: var(--header) !important;
+   text-align: center;
+ }
+ 
+ .active--dashboard{
+   visibility: visible;
+   opacity: 1;
+   top: 50%;
+ }
+ .income--form{
+   width: 100%;
+  height: 95%;
+  background: var(--primary);
+  margin: 10px auto;
+  padding: 30px;
+  border-radius: 9px;
+  display: flex;
+  flex-direction: column;
+  visibility: hidden;
+  opacity: 0;
+  position: fixed;
+  transform: translate(-50%, -50%) ;
+  left: 50%;
+  top: 40%;
+  transition: 0.4s ease-in-out;
+  z-index: 700;
+ }
+ .income--form input{
+   box-shadow: none !important;
+   color: #555 !important;
+ }
+ .active--income{
+   visibility: visible;
+   opacity: 1;
+   top: 50%;
+ }
+ .fixed{
+   background: var(--gradient) !important;
+ }
+ .dark{
+    background: var(--primary);
+  }
+  .active--trigger{
+     animation: fadeUp 1s ease-in-out alternate;
+   }
+  .fixed-btn{
+    position: relative;
+    z-index: 3000 !important;
+  }
+  @keyframes fadeUp{
+    0%{
+      transform: translateY(0px);
+    }
+    50%{
+      transform: translateY(-50px);
+    }
+    100%{
+      transform: translateY(0px);
+    }
+  }
+  .message{
+    width: 90%;
+    padding: 10px;
+    border-radius: 4px;
+    position: fixed;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    z-index: 3000;
+    color: #fff;
+    box-shadow: var(--shd);
+    text-align: center;
+    font-size: 15px;
+    visibility: hidden;
+    opacity: 0;
+  }
+  .message::before{
+    content: "";
+    position: absolute;
+    bottom: -10%;
+    left: 20%;
+    width: 20px;
+    height: 15px;
+    transform: rotate(228deg);
+  }
+  .active--success{
+    background: var(--secondary);
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.6s ease-in-out;
+    top: 20%;
+  }
+  .active--success::before{
+    background: var(--secondary);
+  }
+  .active--error{
+    background: var(--tetiary);
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.6s ease-in-out;
+    top: 20%;
+  }
+  .active--error::before{
+    background: var(--tetiary);
+  }
+  .active--empty{
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.4s ease-in-out;
+  }

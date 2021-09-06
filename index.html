@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Budget Market</title>
+  
+  <!-- HTML -->
+ 
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="materialize.css">
+  <link rel="stylesheet" href="fontawesome/files/css/all.css">
+  <script defer src="js/ui.js"></script>
+  <script defer src="js/jquery-3.6.0.min.js"></script>
+    <script defer src="fontawesome/files/js/all.js"></script>
+  
+</head>
+
+<body>
+  <header class="navbar-fixed">
+  <nav class="appBar dark z-depth-2">
+    <a class="brand-logo left">BUD<span class="gradient-text">GEX</span></a>
+    <ul class="right">
+      <li class="fa-1x add--budget"><p class="fas fa-plus"></p></li>
+    </ul>
+  </nav>
+  </header>
+  
+  <div class="message"></div>
+  
+  <form class="z-depth-2">
+    <h3 class="header">Budget</h3>
+    <div class="input-field">
+      <input type="text" id="product--name" class="product">
+      <label class="label" for="product--name">Product*</label>
+    </div>
+    <div class="input-field">
+      <input type="number" id="product--price" class="price">
+      <label for="product--price">Price*</label>
+    </div>
+    <button type="submit" class="fixed btn submit--btn">Add</button>
+  </form>
+  
+  <div class="container">
+    <h2>All Budgets</h2>
+    
+  </div>
+  
+  <div class="dashboard">
+      <h2>My dashboard</h2>
+    <div class="card">
+        <p class="red-text">Expenses</p>
+        <h3 class="expense">$0.00</h3>
+    </div>
+    <div class="card">
+        <p class="green-text">Budget</p>
+        <h3 class="income" contenteditable="true">$0.00</h3>
+    </div>
+    <div class="card">
+      <p>Balance</p>
+      <h3 class="balance">$0.00</h3>
+    </div>
+  </div>
+  <div class="overlay2"></div>
+  <div class="fixed-action-btn fixed-btn">
+    <div class="btn-floating black btn-large">
+    <i class="fas fa-list"></i>
+    </div>
+  </div>
+  
+  <div class="z-depth-5 income--form">
+    <h4 class="header">Set your budget</h4>
+    <div class="input-field">
+      <input type="number" id="income" />
+      <label for="income">Budget</label>
+    </div>
+    <button type="submit" class="btn fixed white-text add--budgetAmt">Add Budget</button>
+  </div>
+  
+  <!-- Project -->
+  <script src="js/App.js"></script>
+</body>
+</html>
